@@ -80,7 +80,7 @@
     }
 
     .searchButton {
-      @includemq (768px) {
+      @include mq(768px) {
         padding-left: 1rem;
       }
     }
