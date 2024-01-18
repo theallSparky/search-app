@@ -45,4 +45,20 @@ footer p {
 
 img {
   display: block;
+}
+
+.blue {
+  color: #4885ed;
+}
+
+.red {
+  color: #db3236;
+}
+
+.yellow {
+  color: #ffc107;
+}
+
+.green {
+  color: #3cba54;
 }/*# sourceMappingURL=style.css.map */
