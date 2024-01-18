@@ -39,6 +39,14 @@
         line-height: 1.5rem;
         margin-bottom: 0.25rem;
         overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 3px 2px;
+        @include m1(768px) {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+          margin-bottom: 0.5rem;
+        }
       }
     }
   }
