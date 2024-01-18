@@ -42,3 +42,7 @@ body {
   font-family: $font-stack;
   font-size: 22px;
 }
+main {
+  @include flexCloumn;
+  min-height: calc(100vh - 60px);
+}
