@@ -72,4 +72,17 @@ img {
   .exclaim {
     font-size: 5rem;
   }
+}
+
+.offcreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
