@@ -103,4 +103,36 @@ img {
     font-size: 4rem;
     letter-spacing: -10px;
   }
+}
+.searchEntry .searchBar {
+  width: 90vw;
+  display: flex;
+  border: 2px solid #e6e6e6;
+  border-radius: 500px;
+  padding: 0.15rem 0.25rem 0.15rem 0.75rem;
+}
+@media only screen and (min-width: 768px) {
+  .searchEntry .searchBar {
+    width: 80vw;
+    padding: 1.25rem 1.5rem;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .searchEntry .searchBar {
+    width: 60vw;
+  }
+}
+.searchEntry .searchBar input[type=text] {
+  flex-grow: 1;
+  font-size: 0.75rem;
+  text-align: left;
+  letter-spacing: 0.1rem;
+  border: 0;
+  outline: none;
+  min-width: 150px;
+}
+@media only screen and (min-width: 768px) {
+  .searchEntry .searchBar input[type=text] {
+    font-size: 1.25rem;
+  }
 }/*# sourceMappingURL=style.css.map */
