@@ -50,7 +50,7 @@ body {
   font-size: 22px;
 }
 main {
-  @include flexCloumn;
+  @include flexColumn;
   min-height: calc(100vh - 60px);
 }
 
