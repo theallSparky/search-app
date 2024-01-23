@@ -4,3 +4,15 @@ export const getSearchTerm = () => {
   const searchTerm = rawSearchTerm.replaceAll(regex, " ");
   return searchTerm;
 };
+
+export const retrieveSearchResults = async (searchTerm) => {
+  const wikiSearchString = getWikiSearchString(searchTerm);
+};
+
+const getWikiSearchString = (searchTerm) => {
+  const maxChars = getMaxChars();
+};
+
+const getMaxChars = () => {
+  const width = window.innerWidth || document.bodyclientWidth;
+};

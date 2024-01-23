@@ -27,4 +27,5 @@ processTheSearch = async () => {
   // clear the stats line
   const searchTerm = getSearchTerm();
   if (searchTerm === "") return; //Tells app to not call api if search term is blank
+  const resultArray = await retrieveSearchResults(searchTerm);
 };
