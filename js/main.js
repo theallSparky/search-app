@@ -18,6 +18,11 @@ const initApp = () => {
 const submitTheSearch = (event) => {
   event.preventDefault();
   // Delete search results
-  // process the search
+  processTheSearch();
   setSearchFocus();
+};
+
+processTheSearch = async () => {
+  // clear the stats line
+  const searchTerm = getSearchTerm();
 };
