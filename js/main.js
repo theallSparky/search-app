@@ -1,6 +1,7 @@
 import { setSearchFocus } from "./searchBar.js";
 import { getSearchTerm } from "./dataFunctions.js";
 import {
+  deleteSearchResults,
   clearStatsLine,
   buildSearchResults,
   setStatsLine,
@@ -23,7 +24,7 @@ const initApp = () => {
 
 const submitTheSearch = (event) => {
   event.preventDefault();
-  // TODO: Delete search results
+  deleteSearchResults();
   processTheSearch();
   setSearchFocus();
 };
