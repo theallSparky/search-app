@@ -1,4 +1,9 @@
-import { setSearchFocus, showClearTextButton } from "./searchBar.js";
+import {
+  clearSearchText,
+  setSearchFocus,
+  showClearTextButton,
+  clearPushListener,
+} from "./searchBar.js";
 import { getSearchTerm } from "./dataFunctions.js";
 import {
   deleteSearchResults,
@@ -15,10 +20,10 @@ document.addEventListener("readystatechange", (event) => {
 
 const initApp = () => {
   setSearchFocus();
-
-  // TODO: 2 listeners clear text
   const search = document.getElementById("search");
   search.addEventListener("input", showClearTextButton);
+  const clear = document.getElementById("clear");
+  clear.addEventListener("click", clearSearchText);
 
   const form = document.getElementById("searchBar");
   form.addEventListener("submit", submitTheSearch);
