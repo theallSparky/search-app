@@ -1,8 +1,7 @@
 import { setSearchFocus } from "./searchBar.js";
 import { getSearchTerm } from "./dataFunctions.js";
 import { retrieveSearchResults } from "./dataFunctions.js";
-import { buildSearchResults } from "./buildSearchResults.js";
-import { clearStatsLine } from "./searchResults.js";
+import { clearStatsLine, buildSearchResults } from "./searchResults.js";
 
 document.addEventListener("readystatechange", (event) => {
   if (event.target.readyState === "complete") {
