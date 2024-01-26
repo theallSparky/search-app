@@ -16,7 +16,7 @@ document.addEventListener("readystatechange", (event) => {
 const initApp = () => {
   setSearchFocus();
 
-  // TODO: 3 listeners clear text
+  // TODO: 2 listeners clear text
   const search = document.getElementById("search");
   search.addEventListener("input", showClearTextButton);
 
