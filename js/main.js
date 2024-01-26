@@ -11,7 +11,7 @@ document.addEventListener("readystatechange", (event) => {
 const initApp = () => {
   setSearchFocus();
 
-  // 3 listeners clear text
+  // TODO: 3 listeners clear text
 
   const form = document.getElementById("searchBar");
   form.addEventListener("submit", submitTheSearch);
@@ -19,7 +19,7 @@ const initApp = () => {
 
 const submitTheSearch = (event) => {
   event.preventDefault();
-  // Delete search results
+  // TODO: Delete search results
   processTheSearch();
   setSearchFocus();
 };
@@ -29,4 +29,8 @@ processTheSearch = async () => {
   const searchTerm = getSearchTerm();
   if (searchTerm === "") return; //Tells app to not call api if search term is blank
   const resultArray = await retrieveSearchResults(searchTerm);
+  if (resultArray.length) {
+    // TODO: build search results
+    // TODO: set stats line
+  }
 };
