@@ -1,6 +1,7 @@
 import { setSearchFocus } from "./searchBar.js";
 import { getSearchTerm } from "./dataFunctions.js";
 import { retrieveSearchResults } from "./dataFunctions.js";
+import { buildSearchResults } from "./buildSearchResults.js";
 
 document.addEventListener("readystatechange", (event) => {
   if (event.target.readyState === "complete") {
@@ -30,7 +31,7 @@ processTheSearch = async () => {
   if (searchTerm === "") return; //Tells app to not call api if search term is blank
   const resultArray = await retrieveSearchResults(searchTerm);
   if (resultArray.length) {
-    // TODO: build search results
+    buildSearchResults(resultArray);
     // TODO: set stats line
   }
 };
