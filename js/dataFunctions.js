@@ -23,7 +23,7 @@ const getWikiSearchString = (searchTerm) => {
 };
 
 const getMaxChars = () => {
-  const width = window.innerWidth || document.bodyclientWidth;
+  const width = window.innerWidth || document.body.clientWidth;
   let maxChars;
   if (width < 414) maxChars = 65;
   if (width >= 414 && width < 1400) maxChars = 100;
