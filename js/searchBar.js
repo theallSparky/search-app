@@ -17,7 +17,7 @@ export const showClearTextButton = () => {
 export const clearSearchText = (event) => {
   event.preventDefault();
   document.getElementById("search").value = "";
-  const clear = getElementById("clear");
+  const clear = document.getElementById("clear");
   clear.classList.add("none");
   clear.classList.remove("flex");
   setSearchFocus();
