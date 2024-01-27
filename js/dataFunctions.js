@@ -18,7 +18,7 @@ export const retrieveSearchResults = async (searchTerm) => {
 const getWikiSearchString = (searchTerm) => {
   const maxChars = getMaxChars();
   const rawSearchString = `https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${searchTerm}&gsrlimit=20&prop=pageimages|extracts&exchars=${maxChars}&exintro&explaintext&exlimit=max&format=json&origin=*`;
-  const searchString = eccodeURI(rawSearchString);
+  const searchString = encodeURI(rawSearchString);
   return searchString;
 };
 
@@ -47,7 +47,7 @@ const processWikiResults = (results) => {
     const id = key;
     const title = results[key].title;
     const text = results[key].extract;
-    const img = results[key].hasOwnProperty("thumvnail")
+    const img = results[key].hasOwnProperty("thumbnail")
       ? results[key].thumbnail.source
       : null;
     const item = {
@@ -56,7 +56,7 @@ const processWikiResults = (results) => {
       img: img,
       text: text,
     };
-    resultArray.push;
+    resultArray.push(item);
   });
   return resultArray;
 };

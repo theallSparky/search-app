@@ -4,7 +4,7 @@ import {
   showClearTextButton,
   clearPushListener,
 } from "./searchBar.js";
-import { getSearchTerm } from "./dataFunctions.js";
+import { getSearchTerm, retrieveSearchResults } from "./dataFunctions.js";
 import {
   deleteSearchResults,
   clearStatsLine,
@@ -24,7 +24,7 @@ const initApp = () => {
   search.addEventListener("input", showClearTextButton);
   const clear = document.getElementById("clear");
   clear.addEventListener("click", clearSearchText);
-
+  clear.addEventListener("keydown", clearPushListener);
   const form = document.getElementById("searchBar");
   form.addEventListener("submit", submitTheSearch);
 };
@@ -36,7 +36,7 @@ const submitTheSearch = (event) => {
   setSearchFocus();
 };
 
-processTheSearch = async () => {
+const processTheSearch = async () => {
   clearStatsLine();
   const searchTerm = getSearchTerm();
   if (searchTerm === "") return; //Tells app to not call api if search term is blank

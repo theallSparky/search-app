@@ -49,6 +49,7 @@ body {
   font-family: $font-stack;
   font-size: 22px;
 }
+
 main {
   @include flexColumn;
   min-height: calc(100vh - 60px);
@@ -64,10 +65,10 @@ footer {
     font-size: 0.5rem;
     @include mq(768px) {
       font-size: 1rem;
+    }
 
-      a {
-        color: $stats-color;
-      }
+    a {
+      color: $stats-color;
     }
   }
 }

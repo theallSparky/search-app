@@ -1,15 +1,19 @@
 .blue {
   color: $logo-blue;
 }
+
 .red {
   color: $logo-red;
 }
+
 .yellow {
   color: $logo-yellow;
 }
+
 .green {
   color: $logo-green;
 }
+
 .exclaim {
   display: inline-block;
   font-size: 2.5rem;
@@ -18,6 +22,7 @@
     font-size: 5rem;
   }
 }
+
 .offscreen {
   position: absolute;
   left: -10000px;
@@ -26,6 +31,7 @@
 .none {
   display: none;
 }
+
 .flex {
   display: flex;
 }
