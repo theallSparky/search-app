@@ -7,8 +7,8 @@ export const deleteSearchResults = () => {
   }
 };
 
-export const buildSearchResults = (resultsArray) => {
-  resultsArray.forEach((result) => {
+export const buildSearchResults = (resultArray) => {
+  resultArray.forEach((result) => {
     const resultItem = createResultItem(result);
     const resultContents = document.createElement("div");
     resultContents.classList.add("resultContents");
@@ -31,7 +31,7 @@ const createResultItem = (result) => {
   resultTitle.classList.add("resultTitle");
   const link = document.createElement("a");
   link.href = `https://en.wikipedia.org/?curid=${result.id}`;
-  link.textContent = result.resultTitle;
+  link.textContent = result.title;
   link.target = "_blank";
   resultTitle.append(link);
   resultItem.append(resultTitle);
@@ -63,10 +63,10 @@ export const clearStatsLine = () => {
 };
 
 export const setStatsLine = (numberOfResults) => {
-  const statsLine = document.getElementById("stats");
+  const statLine = document.getElementById("stats");
   if (numberOfResults) {
-    statsLine.textContent = `Displaying ${numberOfResults} results.`;
+    statLine.textContent = `Displaying ${numberOfResults} results.`;
   } else {
-    statsLine.textContent = `Sorry, no results!`;
+    statLine.textContent = "Sorry, no results.";
   }
 };
